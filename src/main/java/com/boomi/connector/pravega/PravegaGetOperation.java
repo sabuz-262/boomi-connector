@@ -38,7 +38,7 @@ public class PravegaGetOperation extends BaseGetOperation {
 
 	@Override
 	protected void executeGet(GetRequest request, OperationResponse response) {
-    	/*Logger logger = response.getLogger();
+    	Logger logger = response.getLogger();
         ObjectIdData input = request.getObjectId();
 
         Map<String, Object> connProps = this.getContext().getConnectionProperties();
@@ -82,16 +82,8 @@ public class PravegaGetOperation extends BaseGetOperation {
 		} while (event.getEvent() != null);
 		
 		logger.log(Level.INFO, String.format("No more events from %s/%s%n", scope, streamName));
-        
-        try {
-            // read event
-            // dump the results into the response
 
-       }
-        catch (Exception e) {
-            ResponseUtil.addExceptionFailure(response, input, e);
-        }
-        response.finishPartialResult(input);*/
+        response.finishPartialResult(input);
 	}
 
 	@Override
